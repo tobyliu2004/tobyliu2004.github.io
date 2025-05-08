@@ -293,18 +293,22 @@ footer {
 }
 
 .btn-rounded-white {
-    display: inline-block;
-    color: #fff;
-    padding: 15px 25px;
-    border: 3px solid #fff;
+    color: white;
+    background: #007bff;
+    border: none;
     border-radius: 30px;
-    @include transition();
+    padding: 15px 25px;
+    font-weight: 600;
+    transition: 0.3s ease all;
+    text-decoration: none;
+}
 
-    &:hover {
-        color: $base-color;
-        background: #fff;
-        text-decoration: none;
-    }
+.btn-rounded-white:hover,
+.btn-rounded-white:visited,
+.btn-rounded-white:focus {
+    color: white;
+    background: #0056b3;
+    text-decoration: none;
 }
 
 .shadow {
@@ -350,7 +354,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: white;
+    background: rgba(230, 243, 255, 0.6);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -369,7 +373,7 @@ footer {
     }
 
     h1 {
-        color: #fff;
+        color: #111;
         font-weight: 900;
         font-size: 5em;
         text-transform: uppercase;
@@ -378,8 +382,8 @@ footer {
     }
 
     h2 {
-        color: lighten($base-color, 25%);
-        font-weight: 500;
+        color: #3a3a3a;
+        font-weight: 400;
         font-size: 2.25em;
         margin-bottom: 15px;
     }
@@ -411,14 +415,18 @@ footer {
         cursor: pointer;
         display: block;
         margin: 0 auto;
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
-        border: 3px solid lighten($base-color, 25%);
+        border: 3px solid #3498db;
+        background-color: #f8f9fa;
         text-align:center;
     }
 
     i {
+        color: #333;
+        font-size: 18px;
+        padding-top: 5px;
         animation: pulsate 1.5s ease;
         animation-iteration-count: infinite;
         padding-top: 5px;;

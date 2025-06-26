@@ -16,9 +16,12 @@ navLinks.forEach(link => {
 });
 
 // Active Navigation Link on Scroll
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section[id]');
 
 const setActiveLink = () => {
+    // Only run on the main page
+    if (!document.querySelector('#home')) return;
+    
     const scrollPosition = window.scrollY + 100;
 
     sections.forEach(section => {
@@ -91,6 +94,13 @@ document.querySelectorAll('.project-card').forEach((el, index) => {
 });
 
 document.querySelectorAll('.skill-category').forEach((el, index) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.dataset.animation = `fadeInUp 0.6s ease ${index * 0.1}s forwards`;
+    animateOnScroll.observe(el);
+});
+
+document.querySelectorAll('.experience-item').forEach((el, index) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.dataset.animation = `fadeInUp 0.6s ease ${index * 0.1}s forwards`;

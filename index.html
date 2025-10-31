@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -16,24 +16,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">Toby Liu</a>
+                <a href="#home">TL</a>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+                <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="resume.html" class="nav-link nav-link-highlight">Resume</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -43,285 +32,235 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="section home-section">
-        <canvas id="particles-canvas"></canvas>
-        <div class="container">
-            <div class="home-content">
-                <div class="profile-image-container">
-                    <img src="https://github.com/tobyliu2004.png" alt="Toby Liu" class="profile-image">
-                    <div class="profile-ring"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for internships Summer 2026
                 </div>
-                <h1 class="home-title">Hi, I'm Toby Liu</h1>
-                <h2 class="home-subtitle">Software Engineer & Data Scientist</h2>
-                <p class="home-description">
-                    Building intelligent systems with machine learning, full-stack development, and data engineering.
-                    Currently pursuing my B.S. in Statistics & Data Science and B.A. in Economics at UC Santa Barbara.
+                <h1 class="hero-title">
+                    Building intelligent systems that
+                    <span class="gradient-text">actually matter</span>
+                </h1>
+                <p class="hero-description">
+                    Software Engineer & Data Scientist crafting full-stack applications and ML systems.
+                    Currently @ UC Santa Barbara studying Stats & Economics.
                 </p>
-                <div class="home-cta">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <div class="hero-cta">
+                    <a href="#work" class="btn-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="mailto:tobyliu2004@gmail.com" class="btn-secondary">
+                        <span>Get in touch</span>
+                    </a>
                 </div>
-                <div class="social-links">
-                    <a href="https://github.com/tobyliu2004" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/toby-liu-b45090257/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:tobyliu2004@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">76.59%</div>
+                        <div class="stat-label">ML Model AUC</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500K+</div>
+                        <div class="stat-label">Features Processed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Dimensionality Reduced</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-icon">💻</div>
+                    <div class="card-label">Full-Stack Dev</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">🤖</div>
+                    <div class="card-label">Machine Learning</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">📊</div>
+                    <div class="card-label">Data Engineering</div>
+                </div>
+                <div class="profile-visual">
+                    <img src="https://github.com/tobyliu2004.png" alt="Toby Liu" class="hero-image">
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
+        <div class="scroll-down">
+            <span>Scroll to explore</span>
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
+    <!-- Featured Work -->
+    <section id="work" class="work-section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Full-stack applications and ML systems built with modern technologies</p>
-
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-chart-line project-icon"></i>
-                        <span class="project-tag">NLP & Clustering</span>
-                    </div>
-                    <h3 class="project-title">Competitive Intelligence Platform</h3>
-                    <p class="project-description">
-                        Designed end-to-end data pipeline with Reddit API integration processing 4,662 comments. Architected modular backend with 13 Python modules integrating sentence-transformers and HDBSCAN. Developed automated comparison engine testing 28 clustering configurations with statistical testing for gap identification.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">HDBSCAN</span>
-                        <span class="tech-badge">SQLite</span>
-                        <span class="tech-badge">FastAPI</span>
-                        <span class="tech-badge">NLP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/tobyliu2004" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-book-reader project-icon"></i>
-                        <span class="project-tag">Full-Stack RAG</span>
-                    </div>
-                    <h3 class="project-title">Research Paper RAG Assistant</h3>
-                    <p class="project-description">
-                        Architected full-stack retrieval-augmented QA system with React frontend and FastAPI backend enabling search across 3,000 ArXiv AI/ML papers. Engineered hybrid search combining BM25 keyword algorithm with sentence-transformers embeddings in PostgreSQL/pgvector. Designed RESTful API with cosine similarity ranking and source highlighting.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">PyTorch</span>
-                        <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">FastAPI</span>
-                        <span class="tech-badge">React</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/tobyliu2004" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-dna project-icon"></i>
-                        <span class="project-tag">Machine Learning</span>
-                    </div>
-                    <h3 class="project-title">Cancer Treatment Response Predictor</h3>
-                    <p class="project-description">
-                        Built ensemble machine learning framework comparing 5 algorithms (XGBoost, Random Forest, Logistic Regression, ElasticNet, MLP) with 5-fold cross-validation. Engineered multimodal ML pipeline integrating 4 genomic datasets, achieving 76.59% AUC and reducing prediction variance from 15% to 5.2%.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">XGBoost</span>
-                        <span class="tech-badge">PyTorch</span>
-                        <span class="tech-badge">ETL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/tobyliu2004/tcga-prad-treatment-response-model" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section experience-section">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <p class="section-subtitle">Driving innovation through data science and machine learning</p>
-            
-            <div class="experience-timeline">
-                <!-- Experience 1 -->
-                <div class="experience-item">
-                    <div class="experience-marker"></div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Software Engineer Intern</h3>
-                            <span class="experience-company">Houston Methodist (Medical AI & Innovation Lab)</span>
-                            <span class="experience-date">May 2025 - Aug 2025</span>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Engineered multimodal ML pipeline integrating 4 genomic datasets using statistical design principles to predict bladder cancer patient response to chemotherapy treatment, achieving 76.59% AUC, outperforming published baseline by 2.6%</li>
-                            <li>Architected modular ETL pipeline processing 500,000+ features from 285 TCGA patient records, implementing variance-based feature selection algorithm that reduced dimensionality by 98%</li>
-                            <li>Built ensemble machine learning framework comparing 5 algorithms (XGBoost, Random Forest, Logistic Regression, ElasticNet, MLP) with 5-fold cross-validation, reducing prediction variance from 15% to 5.2%</li>
-                        </ul>
-                        <div class="experience-tech">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">XGBoost</span>
-                            <span class="tech-badge">ETL</span>
-                            <span class="tech-badge">PyTorch</span>
-                            <span class="tech-badge">TCGA</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience 2 -->
-                <div class="experience-item">
-                    <div class="experience-marker"></div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Data Science Intern</h3>
-                            <span class="experience-company">Boston Children's (Computational Biology Department)</span>
-                            <span class="experience-date">Jun 2024 - Aug 2024</span>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Processed ChIP-seq and ATAC-seq genomic datasets through DANPOS3 pipeline for 5 rare pediatric disorders, analyzing chromatin accessibility patterns across 100+ patient samples</li>
-                            <li>Optimized R visualization workflow for peak calling results, reducing manual plotting time from 2 hours to 20 minutes per dataset</li>
-                            <li>Generated 200+ programmatic data visualizations (heatmaps and coverage plots) identifying differential chromatin regions between patient and control groups</li>
-                        </ul>
-                        <div class="experience-tech">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">R</span>
-                            <span class="tech-badge">ChIP-seq</span>
-                            <span class="tech-badge">ATAC-seq</span>
-                            <span class="tech-badge">Genomics</span>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="section-header">
+                <span class="section-label">SELECTED PROJECTS</span>
+                <h2 class="section-title">Featured Work</h2>
             </div>
 
-            <div class="resume-cta">
-                <a href="resume.html" class="btn btn-primary">
-                    <i class="fas fa-file-pdf"></i> View Full Resume
-                </a>
+            <div class="bento-grid">
+                <!-- Large Featured Project -->
+                <div class="bento-item bento-large featured-project">
+                    <div class="project-content">
+                        <span class="project-tag">🏆 Featured</span>
+                        <h3>Competitive Intelligence Platform</h3>
+                        <p>End-to-end data pipeline processing 4,662 comments with NLP clustering. Built with 13 Python modules, sentence-transformers, and HDBSCAN for automated competitive analysis.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>HDBSCAN</span>
+                            <span>SQLite</span>
+                            <span>FastAPI</span>
+                            <span>NLP</span>
+                        </div>
+                        <a href="https://github.com/tobyliu2004" class="project-link">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="project-visual">
+                        <div class="visual-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium Projects -->
+                <div class="bento-item bento-medium">
+                    <div class="project-content">
+                        <span class="project-tag">Full-Stack</span>
+                        <h3>Research Paper RAG Assistant</h3>
+                        <p>Full-stack QA system with React frontend and FastAPI backend. Hybrid search across 3,000 ArXiv papers using BM25 + embeddings.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>FastAPI</span>
+                            <span>PostgreSQL</span>
+                            <span>PyTorch</span>
+                        </div>
+                        <a href="https://github.com/tobyliu2004" class="project-link">
+                            View <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bento-item bento-medium">
+                    <div class="project-content">
+                        <span class="project-tag">ML Pipeline</span>
+                        <h3>Cancer Treatment Predictor</h3>
+                        <p>Ensemble ML framework with 5 algorithms achieving 76.59% AUC. Processed 500K+ features from 285 TCGA patients.</p>
+                        <div class="tech-stack">
+                            <span>XGBoost</span>
+                            <span>PyTorch</span>
+                            <span>ETL</span>
+                            <span>Python</span>
+                        </div>
+                        <a href="https://github.com/tobyliu2004/tcga-prad-treatment-response-model" class="project-link">
+                            View <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Experience Cards -->
+                <div class="bento-item bento-tall experience-card">
+                    <div class="exp-header">
+                        <div class="exp-logo">🏥</div>
+                        <div>
+                            <h4>Houston Methodist</h4>
+                            <p>Software Engineer Intern</p>
+                            <span class="exp-date">May 2025 - Aug 2025</span>
+                        </div>
+                    </div>
+                    <ul class="exp-highlights">
+                        <li>Built multimodal ML pipeline for bladder cancer prediction (76.59% AUC)</li>
+                        <li>Reduced dimensionality by 98% processing 500K+ features</li>
+                        <li>Ensemble framework with 5 algorithms & cross-validation</li>
+                    </ul>
+                </div>
+
+                <div class="bento-item bento-tall experience-card">
+                    <div class="exp-header">
+                        <div class="exp-logo">🧬</div>
+                        <div>
+                            <h4>Boston Children's</h4>
+                            <p>Data Science Intern</p>
+                            <span class="exp-date">Jun 2024 - Aug 2024</span>
+                        </div>
+                    </div>
+                    <ul class="exp-highlights">
+                        <li>Processed ChIP-seq & ATAC-seq data for 5 rare disorders</li>
+                        <li>Reduced plotting time from 2hrs to 20min per dataset</li>
+                        <li>Generated 200+ visualizations for chromatin analysis</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section about-section">
+    <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a Software Engineer and Data Scientist passionate about building intelligent systems that solve real-world problems.
-                        Currently pursuing my B.S. in Statistics & Data Science and B.A. in Economics at UC Santa Barbara,
-                        I've had the privilege of working with leading healthcare institutions to develop impactful ML solutions and full-stack applications.
-                    </p>
-                    <p>
-                        My experience spans across full-stack development, machine learning, and data engineering. At Houston Methodist's Medical AI Lab,
-                        I engineered multimodal ML pipelines achieving 76.59% AUC for bladder cancer treatment prediction. At Boston Children's Hospital,
-                        I processed genomic datasets and built automated visualization pipelines for rare pediatric disorders.
-                    </p>
-                    <p>
-                        I specialize in building end-to-end solutions, from React frontends and FastAPI backends to ML model deployment
-                        and data pipelines. My projects combine modern web technologies with advanced machine learning, emphasizing
-                        scalability, performance, and real-world impact.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>76.59%</h3>
-                            <p>ML Model AUC</p>
-                        </div>
-                        <div class="stat">
-                            <h3>500K+</h3>
-                            <p>Features Processed</p>
-                        </div>
-                        <div class="stat">
-                            <h3>98%</h3>
-                            <p>Dimensionality Reduction</p>
-                        </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-label">BACKGROUND</span>
+                    <h2 class="section-title">A bit about me</h2>
+                    <p>I'm a software engineer and data scientist who loves building things that make a real impact. Currently studying Statistics & Data Science + Economics at UC Santa Barbara, but I spend most of my time shipping code.</p>
+                    <p>My experience ranges from building full-stack RAG systems with React and FastAPI to engineering ML pipelines that process genomic data. I'm equally comfortable debugging a TypeScript frontend as I am optimizing a PyTorch model.</p>
+                    <p>When I'm not coding, you'll find me exploring new ML papers, contributing to open source, or working on side projects that scratch an itch.</p>
+
+                    <div class="about-links">
+                        <a href="https://github.com/tobyliu2004" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/toby-liu-b45090257/" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="mailto:tobyliu2004@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
                     </div>
                 </div>
-                <div class="skills-container">
-                    <h3>Technical Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4>Languages</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">SQL</span>
-                                <span class="skill-tag">R</span>
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">C++</span>
-                                <span class="skill-tag">TypeScript</span>
-                            </div>
+
+                <div class="skills-showcase">
+                    <div class="skill-group">
+                        <h3>Languages & Frameworks</h3>
+                        <div class="skill-grid">
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">JavaScript/TypeScript</div>
+                            <div class="skill-item">React</div>
+                            <div class="skill-item">FastAPI</div>
+                            <div class="skill-item">SQL</div>
+                            <div class="skill-item">R</div>
                         </div>
-                        <div class="skill-category">
-                            <h4>Web & APIs</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">React</span>
-                                <span class="skill-tag">FastAPI</span>
-                                <span class="skill-tag">HTML/CSS</span>
-                                <span class="skill-tag">REST APIs</span>
-                            </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>ML & Data</h3>
+                        <div class="skill-grid">
+                            <div class="skill-item">PyTorch</div>
+                            <div class="skill-item">TensorFlow</div>
+                            <div class="skill-item">Scikit-learn</div>
+                            <div class="skill-item">XGBoost</div>
+                            <div class="skill-item">LLMs</div>
+                            <div class="skill-item">Pandas</div>
                         </div>
-                        <div class="skill-category">
-                            <h4>AI/ML</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">PyTorch</span>
-                                <span class="skill-tag">TensorFlow</span>
-                                <span class="skill-tag">Scikit-learn</span>
-                                <span class="skill-tag">XGBoost</span>
-                                <span class="skill-tag">LLMs</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Databases</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">PostgreSQL</span>
-                                <span class="skill-tag">MongoDB</span>
-                                <span class="skill-tag">Redis</span>
-                                <span class="skill-tag">MySQL</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Cloud & DevOps</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">AWS (S3, EC2)</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">CI/CD</span>
-                                <span class="skill-tag">Git/GitHub</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Data Engineering</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">ETL</span>
-                                <span class="skill-tag">Data Pipelines</span>
-                                <span class="skill-tag">Pandas</span>
-                                <span class="skill-tag">NumPy</span>
-                            </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Infrastructure</h3>
+                        <div class="skill-grid">
+                            <div class="skill-item">PostgreSQL</div>
+                            <div class="skill-item">MongoDB</div>
+                            <div class="skill-item">Docker</div>
+                            <div class="skill-item">AWS</div>
+                            <div class="skill-item">Redis</div>
+                            <div class="skill-item">CI/CD</div>
                         </div>
                     </div>
                 </div>
@@ -330,57 +269,57 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Let's discuss how we can work together</p>
-            
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:tobyliu2004@gmail.com">tobyliu2004@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Santa Barbara, CA</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <a href="https://www.linkedin.com/in/toby-liu-b45090257/" target="_blank">linkedin.com/in/toby-liu-b45090257</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <a href="https://github.com/tobyliu2004" target="_blank">github.com/tobyliu2004</a>
-                        </div>
+                    <h2>Let's build something together</h2>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you're looking for an intern or just want to chat about tech, feel free to reach out.</p>
+
+                    <div class="contact-methods">
+                        <a href="mailto:tobyliu2004@gmail.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>tobyliu2004@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/toby-liu-b45090257/" class="contact-method" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <span>toby-liu-b45090257</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/tobyliu2004" class="contact-method" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <strong>GitHub</strong>
+                                <span>tobyliu2004</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                
+
                 <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn-primary full-width">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -389,7 +328,14 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Toby Liu. Built with passion for data science.</p>
+            <div class="footer-content">
+                <p>&copy; 2025 Toby Liu. Designed & built with caffeine and code.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/tobyliu2004" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/toby-liu-b45090257/" target="_blank">LinkedIn</a>
+                    <a href="mailto:tobyliu2004@gmail.com">Email</a>
+                </div>
+            </div>
         </div>
     </footer>
 

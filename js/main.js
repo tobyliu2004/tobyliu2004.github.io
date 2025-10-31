@@ -47,11 +47,11 @@ const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+        navbar.style.backgroundColor = 'rgba(13, 13, 13, 0.98)';
+        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 0, 110, 0.1)';
     } else {
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+        navbar.style.backgroundColor = 'rgba(13, 13, 13, 0.95)';
+        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
     }
 });
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toby Liu - Data Scientist</title>
-    <meta name="description" content="Toby Liu - Data Scientist specializing in machine learning and healthcare analytics">
+    <title>Toby Liu - Software Engineer & Data Scientist</title>
+    <meta name="description" content="Toby Liu - Software Engineer & Data Scientist specializing in full-stack development, machine learning, and data engineering">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +45,7 @@
 
     <!-- Home Section -->
     <section id="home" class="section home-section">
+        <canvas id="particles-canvas"></canvas>
         <div class="container">
             <div class="home-content">
                 <div class="profile-image-container">
@@ -52,10 +53,10 @@
                     <div class="profile-ring"></div>
                 </div>
                 <h1 class="home-title">Hi, I'm Toby Liu</h1>
-                <h2 class="home-subtitle">Data Scientist & ML Engineer</h2>
+                <h2 class="home-subtitle">Software Engineer & Data Scientist</h2>
                 <p class="home-description">
-                    Building intelligent systems at the intersection of machine learning and healthcare. 
-                    Currently pursuing my B.S. in Statistics & Data Science at UC Santa Barbara.
+                    Building intelligent systems with machine learning, full-stack development, and data engineering.
+                    Currently pursuing my B.S. in Statistics & Data Science and B.A. in Economics at UC Santa Barbara.
                 </p>
                 <div class="home-cta">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -83,27 +84,28 @@
     <section id="projects" class="section projects-section">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Machine learning solutions for real-world healthcare challenges</p>
-            
+            <p class="section-subtitle">Full-stack applications and ML systems built with modern technologies</p>
+
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <i class="fas fa-dna project-icon"></i>
-                        <span class="project-tag">Machine Learning</span>
+                        <i class="fas fa-chart-line project-icon"></i>
+                        <span class="project-tag">NLP & Clustering</span>
                     </div>
-                    <h3 class="project-title">Cancer Treatment Response Predictor</h3>
+                    <h3 class="project-title">Competitive Intelligence Platform</h3>
                     <p class="project-description">
-                        Built Random Forest and XGBoost models to predict prostate cancer treatment responses from gene expression data (TCGA-PRAD), achieving 70% AUC. Implemented deep learning classifiers using TensorFlow for kidney cancer data analysis.
+                        Designed end-to-end data pipeline with Reddit API integration processing 4,662 comments. Architected modular backend with 13 Python modules integrating sentence-transformers and HDBSCAN. Developed automated comparison engine testing 28 clustering configurations with statistical testing for gap identification.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">TensorFlow</span>
-                        <span class="tech-badge">XGBoost</span>
-                        <span class="tech-badge">TCGA</span>
+                        <span class="tech-badge">HDBSCAN</span>
+                        <span class="tech-badge">SQLite</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">NLP</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/tobyliu2004/tcga-prad-treatment-response-model" target="_blank" class="project-link">
+                        <a href="https://github.com/tobyliu2004" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
@@ -112,21 +114,22 @@
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <i class="fas fa-hospital project-icon"></i>
-                        <span class="project-tag">Healthcare Analytics</span>
+                        <i class="fas fa-book-reader project-icon"></i>
+                        <span class="project-tag">Full-Stack RAG</span>
                     </div>
-                    <h3 class="project-title">Hospital Cost Prediction Pipeline</h3>
+                    <h3 class="project-title">Research Paper RAG Assistant</h3>
                     <p class="project-description">
-                        Developed an XGBoost model to predict inpatient procedure costs from SPARCS data, achieving 91% R² with Optuna hyperparameter tuning. Added fairness audits, drift simulations, and anomaly detection, reducing manual QA time by 50%.
+                        Architected full-stack retrieval-augmented QA system with React frontend and FastAPI backend enabling search across 3,000 ArXiv AI/ML papers. Engineered hybrid search combining BM25 keyword algorithm with sentence-transformers embeddings in PostgreSQL/pgvector. Designed RESTful API with cosine similarity ranking and source highlighting.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">XGBoost</span>
-                        <span class="tech-badge">SHAP</span>
-                        <span class="tech-badge">Streamlit</span>
+                        <span class="tech-badge">PyTorch</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">React</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/tobyliu2004/hospital-cost-predictor" target="_blank" class="project-link">
+                        <a href="https://github.com/tobyliu2004" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
@@ -135,21 +138,21 @@
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <i class="fas fa-robot project-icon"></i>
-                        <span class="project-tag">MLOps</span>
+                        <i class="fas fa-dna project-icon"></i>
+                        <span class="project-tag">Machine Learning</span>
                     </div>
-                    <h3 class="project-title">ML Model Audit Copilot</h3>
+                    <h3 class="project-title">Cancer Treatment Response Predictor</h3>
                     <p class="project-description">
-                        Built a modular ML audit framework to catch drift, data leakage, fairness issues, and schema mismatches. Automated 7+ audit workflows with CLI + SQL support, integrating SHAP explainability and demographic bias breakdowns.
+                        Built ensemble machine learning framework comparing 5 algorithms (XGBoost, Random Forest, Logistic Regression, ElasticNet, MLP) with 5-fold cross-validation. Engineered multimodal ML pipeline integrating 4 genomic datasets, achieving 76.59% AUC and reducing prediction variance from 15% to 5.2%.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">SQL</span>
-                        <span class="tech-badge">SHAP</span>
-                        <span class="tech-badge">CLI</span>
+                        <span class="tech-badge">XGBoost</span>
+                        <span class="tech-badge">PyTorch</span>
+                        <span class="tech-badge">ETL</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/tobyliu2004/model-audit-copilot" target="_blank" class="project-link">
+                        <a href="https://github.com/tobyliu2004/tcga-prad-treatment-response-model" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
@@ -170,22 +173,21 @@
                     <div class="experience-marker"></div>
                     <div class="experience-content">
                         <div class="experience-header">
-                            <h3 class="experience-title">Machine Learning Engineer Intern</h3>
-                            <span class="experience-company">Houston Methodist's Medical AI Lab</span>
-                            <span class="experience-date">Jun 2024 - Sep 2024</span>
+                            <h3 class="experience-title">Software Engineer Intern</h3>
+                            <span class="experience-company">Houston Methodist (Medical AI & Innovation Lab)</span>
+                            <span class="experience-date">May 2025 - Aug 2025</span>
                         </div>
                         <ul class="experience-details">
-                            <li>Built Random Forest and XGBoost models to predict prostate cancer treatment responses from gene expression data (TCGA-PRAD), achieving 70% AUC</li>
-                            <li>Processed 500+ patient samples with 60K+ gene expression features using high-dimensional data reduction techniques</li>
-                            <li>Developed deep learning classifiers in TensorFlow for kidney cancer (TCGA-KIRC, TCGA-KIRP) data analysis</li>
-                            <li>Created interactive dashboards using Streamlit for model interpretability and clinical insights</li>
+                            <li>Engineered multimodal ML pipeline integrating 4 genomic datasets using statistical design principles to predict bladder cancer patient response to chemotherapy treatment, achieving 76.59% AUC, outperforming published baseline by 2.6%</li>
+                            <li>Architected modular ETL pipeline processing 500,000+ features from 285 TCGA patient records, implementing variance-based feature selection algorithm that reduced dimensionality by 98%</li>
+                            <li>Built ensemble machine learning framework comparing 5 algorithms (XGBoost, Random Forest, Logistic Regression, ElasticNet, MLP) with 5-fold cross-validation, reducing prediction variance from 15% to 5.2%</li>
                         </ul>
                         <div class="experience-tech">
                             <span class="tech-badge">Python</span>
-                            <span class="tech-badge">TensorFlow</span>
                             <span class="tech-badge">XGBoost</span>
+                            <span class="tech-badge">ETL</span>
+                            <span class="tech-badge">PyTorch</span>
                             <span class="tech-badge">TCGA</span>
-                            <span class="tech-badge">Streamlit</span>
                         </div>
                     </div>
                 </div>
@@ -196,20 +198,20 @@
                     <div class="experience-content">
                         <div class="experience-header">
                             <h3 class="experience-title">Data Science Intern</h3>
-                            <span class="experience-company">Boston Children's Hospital</span>
-                            <span class="experience-date">Jun 2023 - Aug 2023</span>
+                            <span class="experience-company">Boston Children's (Computational Biology Department)</span>
+                            <span class="experience-date">Jun 2024 - Aug 2024</span>
                         </div>
                         <ul class="experience-details">
-                            <li>Analyzed 50K+ genomic sequences using Python, identifying 15 novel genetic variants linked to neurodevelopmental disorders</li>
-                            <li>Built automated bioinformatics pipelines processing 10GB+ datasets daily, reducing analysis time by 40%</li>
-                            <li>Implemented statistical models for variant calling with 95% accuracy using scikit-learn and custom algorithms</li>
-                            <li>Collaborated with geneticists to validate findings, contributing to 2 research publications</li>
+                            <li>Processed ChIP-seq and ATAC-seq genomic datasets through DANPOS3 pipeline for 5 rare pediatric disorders, analyzing chromatin accessibility patterns across 100+ patient samples</li>
+                            <li>Optimized R visualization workflow for peak calling results, reducing manual plotting time from 2 hours to 20 minutes per dataset</li>
+                            <li>Generated 200+ programmatic data visualizations (heatmaps and coverage plots) identifying differential chromatin regions between patient and control groups</li>
                         </ul>
                         <div class="experience-tech">
                             <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Bioinformatics</span>
+                            <span class="tech-badge">R</span>
+                            <span class="tech-badge">ChIP-seq</span>
+                            <span class="tech-badge">ATAC-seq</span>
                             <span class="tech-badge">Genomics</span>
-                            <span class="tech-badge">Statistical Analysis</span>
                         </div>
                     </div>
                 </div>
@@ -231,33 +233,32 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a Data Scientist with a passion for leveraging machine learning to solve complex healthcare challenges. 
-                        Currently pursuing my B.S. in Statistics & Data Science and B.A. in Economics at UC Santa Barbara, 
-                        I've had the privilege of working with leading healthcare institutions to develop impactful ML solutions.
+                        I'm a Software Engineer and Data Scientist passionate about building intelligent systems that solve real-world problems.
+                        Currently pursuing my B.S. in Statistics & Data Science and B.A. in Economics at UC Santa Barbara,
+                        I've had the privilege of working with leading healthcare institutions to develop impactful ML solutions and full-stack applications.
                     </p>
                     <p>
-                        My experience in the healthcare analytics and health tech industry has given me unique insights into 
-                        how data science can transform patient care. At Houston Methodist's Medical AI Lab, I developed 
-                        predictive models for cancer treatment responses, while my work at Boston Children's Hospital focused 
-                        on genomic sequence analysis and computational biology.
+                        My experience spans across full-stack development, machine learning, and data engineering. At Houston Methodist's Medical AI Lab,
+                        I engineered multimodal ML pipelines achieving 76.59% AUC for bladder cancer treatment prediction. At Boston Children's Hospital,
+                        I processed genomic datasets and built automated visualization pipelines for rare pediatric disorders.
                     </p>
                     <p>
-                        I specialize in building end-to-end machine learning pipelines, from feature engineering and model 
-                        development to deployment and monitoring. My projects emphasize not just accuracy, but also 
-                        interpretability, fairness, and real-world applicability.
+                        I specialize in building end-to-end solutions, from React frontends and FastAPI backends to ML model deployment
+                        and data pipelines. My projects combine modern web technologies with advanced machine learning, emphasizing
+                        scalability, performance, and real-world impact.
                     </p>
                     <div class="about-stats">
                         <div class="stat">
-                            <h3>91%</h3>
-                            <p>Model Accuracy</p>
+                            <h3>76.59%</h3>
+                            <p>ML Model AUC</p>
                         </div>
                         <div class="stat">
-                            <h3>50K+</h3>
-                            <p>Genomic Sequences Analyzed</p>
+                            <h3>500K+</h3>
+                            <p>Features Processed</p>
                         </div>
                         <div class="stat">
-                            <h3>60%</h3>
-                            <p>Audit Time Reduction</p>
+                            <h3>98%</h3>
+                            <p>Dimensionality Reduction</p>
                         </div>
                     </div>
                 </div>
@@ -268,35 +269,58 @@
                             <h4>Languages</h4>
                             <div class="skill-tags">
                                 <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
                                 <span class="skill-tag">SQL</span>
                                 <span class="skill-tag">R</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">TypeScript</span>
                             </div>
                         </div>
                         <div class="skill-category">
-                            <h4>ML/DL</h4>
+                            <h4>Web & APIs</h4>
                             <div class="skill-tags">
-                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">FastAPI</span>
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">REST APIs</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>AI/ML</h4>
+                            <div class="skill-tags">
                                 <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">TensorFlow</span>
                                 <span class="skill-tag">Scikit-learn</span>
                                 <span class="skill-tag">XGBoost</span>
+                                <span class="skill-tag">LLMs</span>
                             </div>
                         </div>
                         <div class="skill-category">
-                            <h4>Cloud & Tools</h4>
+                            <h4>Databases</h4>
                             <div class="skill-tags">
-                                <span class="skill-tag">GCP</span>
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">Airflow</span>
-                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">Redis</span>
+                                <span class="skill-tag">MySQL</span>
                             </div>
                         </div>
                         <div class="skill-category">
-                            <h4>Domains</h4>
+                            <h4>Cloud & DevOps</h4>
                             <div class="skill-tags">
-                                <span class="skill-tag">Healthcare Analytics</span>
-                                <span class="skill-tag">Bioinformatics</span>
-                                <span class="skill-tag">NLP</span>
-                                <span class="skill-tag">Time Series</span>
+                                <span class="skill-tag">AWS (S3, EC2)</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">CI/CD</span>
+                                <span class="skill-tag">Git/GitHub</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Data Engineering</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">ETL</span>
+                                <span class="skill-tag">Data Pipelines</span>
+                                <span class="skill-tag">Pandas</span>
+                                <span class="skill-tag">NumPy</span>
                             </div>
                         </div>
                     </div>
@@ -324,7 +348,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h3>Location</h3>
-                            <p>San Francisco, CA</p>
+                            <p>Santa Barbara, CA</p>
                         </div>
                     </div>
                     <div class="contact-item">

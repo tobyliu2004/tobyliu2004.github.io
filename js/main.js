@@ -286,3 +286,135 @@ window.addEventListener('load', preloadImages);
 console.log('%c👋 Hi there!', 'font-size: 24px; font-weight: bold; color: #2563eb;');
 console.log('%cThanks for checking out my portfolio!', 'font-size: 16px; color: #6b7280;');
 console.log('%cFeel free to reach out at tobyliu2004@gmail.com', 'font-size: 14px; color: #6b7280;');
+
+// Particle Animation
+const canvas = document.getElementById('particles-canvas');
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animationFrameId;
+
+    // Set canvas size
+    function resizeCanvas() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Particle class
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 3 + 1;
+            this.speedX = Math.random() * 1 - 0.5;
+            this.speedY = Math.random() * 1 - 0.5;
+            this.opacity = Math.random() * 0.5 + 0.2;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            // Wrap around edges
+            if (this.x > canvas.width) this.x = 0;
+            if (this.x < 0) this.x = canvas.width;
+            if (this.y > canvas.height) this.y = 0;
+            if (this.y < 0) this.y = canvas.height;
+        }
+
+        draw() {
+            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    // Create particles
+    function initParticles() {
+        particles = [];
+        const particleCount = Math.min(100, Math.floor((canvas.width * canvas.height) / 10000));
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+    }
+    initParticles();
+
+    // Animation loop
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+
+        // Draw connections
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < 100) {
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.15 * (1 - distance / 100)})`;
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+
+        animationFrameId = requestAnimationFrame(animate);
+    }
+
+    // Start animation
+    animate();
+
+    // Pause animation when not visible
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            cancelAnimationFrame(animationFrameId);
+        } else {
+            animate();
+        }
+    });
+}
+
+// Cursor trail effect
+let cursorTrail = [];
+const maxTrailLength = 20;
+
+document.addEventListener('mousemove', (e) => {
+    cursorTrail.push({ x: e.clientX, y: e.clientY, timestamp: Date.now() });
+
+    // Keep trail length manageable
+    if (cursorTrail.length > maxTrailLength) {
+        cursorTrail.shift();
+    }
+});
+
+// Skill tag 3D tilt effect
+document.querySelectorAll('.skill-tag').forEach(tag => {
+    tag.addEventListener('mousemove', (e) => {
+        const rect = tag.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = (y - centerY) / 10;
+        const rotateY = (centerX - x) / 10;
+
+        tag.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+    });
+
+    tag.addEventListener('mouseleave', () => {
+        tag.style.transform = '';
+    });
+});
